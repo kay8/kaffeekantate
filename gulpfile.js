@@ -132,4 +132,4 @@ gulp.task('watch_production', function() {
 gulp.task('default', ['browser-sync', 'watch']);
 
 // release
-gulp.task('production', ['browser-sync', 'watch_production', 'minifyCSS', 'uglify']);
+gulp.task('production', ['minifyCSS', 'uglify']);
