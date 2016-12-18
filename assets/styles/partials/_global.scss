@@ -1,0 +1,170 @@
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0 auto;
+  background: #000;
+  line-height: 1.5;
+  font-family: Helvetica, Arial, sans-serif;
+
+  @include remy(16);
+}
+
+section {
+  width: 100%;
+}
+
+
+a {
+  transition: all .2s ease-out;
+  outline: none;
+  text-decoration: none;
+  opacity: 1;
+  color: #000;
+  &:hover {
+    opacity: 0.5;
+  }
+
+  img {
+    transition: opacity .2s ease-in;
+  }
+
+  &:hover {
+    img {
+      transition: opacity .2s ease-in;
+      opacity:0.8;
+    }
+  }
+}
+
+hr {
+  border: 0;
+  height: 1px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+//
+// form some of followings from https://gist.github.com/anthonyshort/552543
+
+input,
+label,
+select,
+button,
+textarea
+{
+  display:inline-block;
+  vertical-align:middle;
+}
+input:focus
+{
+  outline:0;
+}
+input,
+textarea
+{
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+}
+button,
+input[type='reset'],
+input[type='button'],
+input[type='submit'],
+input[type='checkbox'],
+input[type='radio'],
+input[type='text'],
+input[type='password'],
+select
+{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  box-shadow: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
+  background: transparent;
+  border: 1px solid;
+
+}
+input[type='search']
+{
+  -webkit-appearance:textfield;
+  -webkit-box-sizing:content-box;
+}
+::-webkit-search-decoration
+{
+  display:none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  border-radius: 0;
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+
+//
+// Utility
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.is-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+.link-style {
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+}

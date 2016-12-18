@@ -1,0 +1,5 @@
+@mixin remy($pxval: 16) {
+  // font-size: 62.5%; in html
+  font-size: $pxval * 1px;
+  font-size: ($pxval / 10) * 1rem;
+}
