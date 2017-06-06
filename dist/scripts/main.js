@@ -1,0 +1,1 @@
+"use strict";!function(){({checkMS:function(){var t=window.navigator.userAgent,e=t.indexOf("MSIE"),n=document.querySelector("body");e>-1||navigator.userAgent.match(/Trident.*rv\:11\./)||navigator.userAgent.match(/Edge/)?n.classList.add("is-ms"):(n.classList.add("is-not-ms"),n.classList.remove("no-animation"))}}).checkMS()}();

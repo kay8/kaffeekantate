@@ -26,8 +26,8 @@ body {
   margin: 0 auto;
   background: #000;
   line-height: 1.5;
-  font-family: Helvetica, Arial, sans-serif;
-
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.2rem;
   @include remy(16);
 }
 
@@ -183,3 +183,6 @@ button {
   border-bottom: 1px solid currentColor;
   cursor: pointer;
 }
+
+// colors
+$gray: #757575;
