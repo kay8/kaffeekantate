@@ -8,24 +8,29 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 svg {
   width: 100%;
   height: 100%;
 }
+
 .path {
-  stroke: #FBFBFB;
-  fill: #FBFBFB;
-  fill-opacity:0;
+  stroke: #fbfbfb;
+  fill: #fbfbfb;
+  fill-opacity: 0;
 }
+
 .border {
   stroke-dasharray: 4900;
   stroke-dashoffset: 4900;
   animation: anim1 1.5s linear 1s forwards, anim4 1s linear 3s forwards;
 }
+
 @keyframes anim1 {
-  0%  {
+  0% {
     stroke-dashoffset: 4900;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -36,24 +41,29 @@ svg {
   stroke-dashoffset: 680;
   animation: anim2 0.7s linear 2s forwards, anim4 1s linear 3s forwards;
 }
+
 @keyframes anim2 {
-  0%  {
+  0% {
     stroke-dashoffset: 680;
   }
+
   100% {
     stroke-dashoffset: 0;
 
   }
 }
+
 .letter2 {
   stroke-dasharray: 910;
   stroke-dashoffset: 910;
   animation: anim3 0.7s linear 2s forwards, anim4 1s linear 3s forwards;
 }
+
 @keyframes anim3 {
-  0%  {
+  0% {
     stroke-dashoffset: 910;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -63,6 +73,7 @@ svg {
   0% {
     fill-opacity: 0;
   }
+
   100% {
     fill-opacity: 1;
   }
@@ -76,13 +87,15 @@ svg {
   height: 100%;
   animation: anim5 0.4s linear 3.8s forwards;
 }
+
 @keyframes anim5 {
   0% {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
     width: 0;
   }
+
   100% {
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
     width: 200%;
   }
 }
@@ -100,10 +113,12 @@ svg {
   opacity: 0;
   animation: displayIntro 1.8s ease-out 4.2s forwards;
 }
+
 @keyframes displayIntro {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -115,6 +130,7 @@ svg {
   margin: 0 auto;
   text-align: center;
 }
+
 .intro__title {
   font-family: 'Merriweather', serif;
   font-weight: 700;
@@ -122,6 +138,7 @@ svg {
   letter-spacing: 0.1rem;
   margin-bottom: 10px;
 }
+
 .intro__desc,
 .intro__links {
   font-family: 'Lato', sans-serif;
@@ -129,12 +146,15 @@ svg {
   @include remy(20);
   letter-spacing: 0.2rem;
 }
+
 .intro__desc {
   margin-bottom: 20px;
   @include remy(20);
 }
+
 .intro__links {
   @include remy(18);
+
   a {
     color: #212121;
   }
