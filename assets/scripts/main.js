@@ -15,9 +15,8 @@
           !!navigator.userAgent.match(/Edge/) ) {
         body.classList.add('is-ms');
       } else {
-        // body.classList.add('is-not-ms');
-        // body.classList.remove('no-animation');
-        body.classList.add('is-ms');
+        body.classList.add('is-not-ms');
+        body.classList.remove('no-animation');
       }
     }
   };
