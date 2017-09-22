@@ -25,7 +25,9 @@ const dir = {
   js_min: 'dist/scripts',
   sass: 'assets/styles',
   partials: 'assets/styles/partials',
-  js: 'assets/scripts'
+  js: 'assets/scripts',
+  images_assets: 'assets/images',
+  images_dist: 'dist/images'
 };
 
 // error notification settings for plumber
@@ -126,6 +128,14 @@ gulp.task('lint', () => {
     .pipe(browserSync.reload({stream: true}));
 });
 
+// copy images
+gulp.task('image', () => {
+  return gulp.src([dir.images_assets + '/*'])
+  .pipe($.plumber(plumberErrorHandler))
+  .pipe(gulp.dest(dir.images_dist))
+  .pipe(browserSync.reload({stream: true}));
+});
+
 // watch
 gulp.task('watch', () => {
   gulp.watch(dir.js + '/*.js',['lint']);
@@ -133,11 +143,15 @@ gulp.task('watch', () => {
   gulp.watch(dir.sass + '/*.scss',['sass', 'scsslint']);
   gulp.watch(dir.partials + '/*.scss', ['sass', 'scsslint']);
   gulp.watch(dir.current + '/*.html',['bs-reload']);
+  gulp.watch(dir.images_assets + '/*',['image']);
 });
 
 
 // default: watch changes without minify / uglify
 gulp.task('default', ['browser-sync', 'watch']);
+
+// build: 
+gulp.task('build', ['sass', 'scsslint', 'minifyCSS', 'lint', 'uglify', 'image']);
 
 // production: only minify and uglify without sourcemaps
 gulp.task('production', ['minifyCSS', 'uglify']);
